@@ -14,27 +14,27 @@ import javax.swing.SwingConstants;
 
 public class Input {
 	public static void main(String[] args) {
-		// Aby program vùbec fungoval, musíme mít tuhle funkci v tomto kódu.
+		// Aby program vÃ¹bec fungoval, musÃ­me mÃ­t tuhle funkci v tomto kÃ³du.
 		JFrame frame = new JFrame("TextInput");
 		frame.setSize(500, 400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(false);
 		
-		// Hlavní funkce tohoto kódu od toho je samožøejmì odvozeno název programu.
+		// HlavnÃ­ funkce tohoto kÃ³du od toho je samoÅ¾Ã¸ejmÃ¬ odvozeno nÃ¡zev programu.
 		JPanel panel = new JPanel(new FlowLayout(SwingConstants.LEADING, 10, 10));
 		frame.add(panel);
 		JTextField field = new JTextField(10);
 		panel.add(field);
 		
 		
-		// Tlaèítko pro funkci (ActionListener)
+		// TlaÃ¨Ã­tko pro funkci (ActionListener)
 		JButton button = new JButton("Enter");
 		button.setPreferredSize(new Dimension(100, 15));
 		panel.add(button);
 		
 	
-		// Funkce, která z tlaèítka vezme text který jste napsali v JTextField.
+		// Funkce, kterÃ¡ z tlaÃ¨Ã­tka vezme text kterÃ½ jste napsali v JTextField.
 		JLabel label = new JLabel();
 		button.addActionListener(new ActionListener() {
 			@Override
@@ -43,15 +43,15 @@ public class Input {
 					String txt = field.getText().trim();
 					label.setText(txt);
 			    if(txt.isEmpty()) {
-			    	  label.setText("Musíte napsat vìtu nebo slovo do textového pole!");
+			    	  label.setText("MusÃ­te napsat vÃ¬tu nebo slovo do textovÃ©ho pole!");
 					}
 				} 	
 			}
 		});
-		// Aby fungovala celá funkce, musíme zadat .add 
+		// Aby fungovala celÃ¡ funkce, musÃ­me zadat .add 
 		panel.add(label, new FlowLayout(SwingConstants.LEFT, 10, 10));
 		
-		// .setVisible tu musí být, jinak by se okno programu neukázalo.
-		frame.setVisible(true);
+		// .setVisible tu musÃ­ bÃ½t, jinak by se okno programu neukÃ¡zalo.
+		frame.setVisible(true); 
 	}
 }
