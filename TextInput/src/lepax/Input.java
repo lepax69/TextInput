@@ -34,7 +34,7 @@ public class Input {
 		panel.add(button);
 		
 	
-		// Funkce, která z tlačítka vezme text který jste napsali v textovém poli.
+		// Funkcem když napíšete do textového pole větu nebo slovo a stisknete Enter (což je to hlavní) tak program ho přepíše do Textu.
 		JLabel label = new JLabel();
 		button.addActionListener(new ActionListener() {
 			@Override
