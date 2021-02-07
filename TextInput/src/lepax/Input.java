@@ -14,27 +14,27 @@ import javax.swing.SwingConstants;
 
 public class Input {
 	public static void main(String[] args) {
-		// Aby program vùbec fungoval, musíme mít tuhle funkci v tomto kódu.
+		// Aby program vůbec fungoval, musíme mít tuhle funkci v tomto kódu.
 		JFrame frame = new JFrame("TextInput");
 		frame.setSize(500, 400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(false);
 		
-		// Hlavní funkce tohoto kódu od toho je samožøejmì odvozeno název programu.
+		// Hlavní funkce tohoto kódu od toho je samožrejmě odvozeno název programu.
 		JPanel panel = new JPanel(new FlowLayout(SwingConstants.LEADING, 10, 10));
 		frame.add(panel);
 		JTextField field = new JTextField(10);
 		panel.add(field);
 		
 		
-		// Tlaèítko pro funkci (ActionListener)
+		// Tlačítko pro funkci (ActionListener)
 		JButton button = new JButton("Enter");
 		button.setPreferredSize(new Dimension(100, 15));
 		panel.add(button);
 		
 	
-		// Funkce, která z tlaèítka vezme text který jste napsali v JTextField.
+		// Funkce, která z tlačítka vezme text který jste napsali v textovém poli.
 		JLabel label = new JLabel();
 		button.addActionListener(new ActionListener() {
 			@Override
@@ -43,7 +43,7 @@ public class Input {
 					String txt = field.getText().trim();
 					label.setText(txt);
 			    if(txt.isEmpty()) {
-			    	  label.setText("Musíte napsat vìtu nebo slovo do textového pole!");
+			    	  label.setText("Musíte napsat větu nebo slovo do textového pole!");
 					}
 				} 	
 			}
